@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[618],{4410:s=>{s.exports=JSON.parse('{"sourceUrl":"https://github.com/x6nny/TrueSignal/blob/main","baseUrl":"/TrueSignal/","classOrder":[],"apiCategories":[]}')}}]);
