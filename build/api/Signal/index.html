@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="plugin-moonwave plugin-id-moonwave" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">Signal | TrueSignal</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://x6nny.github.io/LightSignal/api/Signal"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="Signal | TrueSignal"><meta data-rh="true" name="description" content="A lightweight Signal implementation for handling custom events."><meta data-rh="true" property="og:description" content="A lightweight Signal implementation for handling custom events."><link data-rh="true" rel="canonical" href="https://x6nny.github.io/LightSignal/api/Signal"><link data-rh="true" rel="alternate" href="https://x6nny.github.io/LightSignal/api/Signal" hreflang="en"><link data-rh="true" rel="alternate" href="https://x6nny.github.io/LightSignal/api/Signal" hreflang="x-default"><link rel="stylesheet" href="/LightSignal/assets/css/styles.b9f2c64d.css">
+<script src="/LightSignal/assets/js/runtime~main.05821083.js" defer="defer"></script>
+<script src="/LightSignal/assets/js/main.5094f432.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();null!==e?t(e):window.matchMedia("(prefers-color-scheme: dark)").matches?t("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,t("light"))}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/LightSignal/"><b class="navbar__title text--truncate">TrueSignal</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/LightSignal/api/">API</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/x6nny/TrueSignal" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input id="search_input_react" type="search" placeholder="Loading..." aria-label="Search" class="navbar__search-input search-bar" disabled=""></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0 docPageContainer_wNNk"><div class="docPage_Dpn1"><div class="docSidebarContainer_o_re"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/LightSignal/api/Signal">​Signal</a></li></ul></nav></div></div><main class="docMainContainer_HJE1"><div class="container padding-vert--lg"><div class="row"><div class="col docItemCol_MU3C"><div class="docItemContainer_Wv98"><article><div class="member_J0w1 markdown"><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_oUs_"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><header><h1 class="docTitle_mZRt" style="text-decoration:none"><span style="display:inline-block">Signal</span></h1><div class="luaClassTags_EipM"></div><div>
+<p>A lightweight Signal implementation for handling custom events.</p>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="types">Types<a href="#types" class="hash-link" aria-label="Direct link to Types" title="Direct link to Types">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="SignalData"><code style="text-decoration:none">SignalData</code><a href="#SignalData" class="hash-link" aria-label="Direct link to SignalData" title="Direct link to SignalData">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/x6nny/TrueSignal/blob/main/src/shared/TrueSignal/init.luau#L14"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>SignalData<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>connections<!-- -->: </code><code class="purple_ieR2">{</code><code class="green_DgR4">{</code><div class="inset_uKQm"><code>listener<!-- -->: </code><code class="blue_P4bS">listener</code><code class="green_DgR4">,</code></div><div class="inset_uKQm"><code>cleanup<!-- -->: </code><code class="blue_P4bS">cleanup</code></div><code class="green_DgR4">}</code><code class="purple_ieR2">}</code></div></div><code>}</code></div><div></div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="SignalClass"><code style="text-decoration:none">SignalClass</code><a href="#SignalClass" class="hash-link" aria-label="Direct link to SignalClass" title="Direct link to SignalClass">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/x6nny/TrueSignal/blob/main/src/shared/TrueSignal/init.luau#L35"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>SignalClass<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>store<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>signal<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/LightSignal/api/Signal">Signal</a></code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>name<!-- -->: </code><code class="blue_P4bS">string</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>overwrite<!-- -->: </code><code class="blue_P4bS">boolean?</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code></div><div><code>unstore<!-- -->: </code><code class="purple_ieR2">(</code><code>signal<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/LightSignal/api/Signal">Signal</a></code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code></div><div><code>fire<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>signal<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/LightSignal/api/Signal">Signal</a></code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code class="blue_P4bS">...any</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code></div><div><code>connect<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>signal<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/LightSignal/api/Signal">Signal</a></code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>listener<!-- -->: </code><code class="blue_P4bS">function</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>cleanup<!-- -->: </code><code class="blue_P4bS">function?</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code></div><div><code>once<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>signal<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/LightSignal/api/Signal">Signal</a></code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>listener<!-- -->: </code><code class="blue_P4bS">function</code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>cleanup<!-- -->: </code><code class="blue_P4bS">function?</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code></div><div><code>wait<!-- -->: </code><code class="purple_ieR2">(</code><code>signal<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/LightSignal/api/Signal">Signal</a></code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="blue_P4bS">...any</code></div><div><code>waitUntil<!-- -->: </code><code class="purple_ieR2">(</code><div class="inset_uKQm"><code>signal<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/LightSignal/api/Signal">Signal</a></code><code class="purple_ieR2">,</code></div><div class="inset_uKQm"><code>timeout<!-- -->: </code><code class="blue_P4bS">number</code></div><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="blue_P4bS">...any</code></div><div><code>cleanUp<!-- -->: </code><code class="purple_ieR2">(</code><code>signal<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/LightSignal/api/Signal">Signal</a></code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code></div></div><code>}</code></div><div></div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="store"><code style="text-decoration:none">store</code><a href="#store" class="hash-link" aria-label="Direct link to store" title="Direct link to store">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/x6nny/TrueSignal/blob/main/src/shared/TrueSignal/init.luau#L57"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Signal<!-- -->.</code><code class="green_DgR4">store</code><code>(</code><div class="inset_uKQm"><div><code>signal<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/LightSignal/api/Signal">Signal</a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The signal to store.</p>
+</span></span></div><div><code>name<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The name to register the signal under.</p>
+</span></span></div><div><code>overwrite?<!-- -->: </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
+<p>Whether to overwrite an existing signal with the same name.</p>
+</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Stores a signal in a global registry by name.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="unstore"><code style="text-decoration:none">unstore</code><a href="#unstore" class="hash-link" aria-label="Direct link to unstore" title="Direct link to unstore">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/x6nny/TrueSignal/blob/main/src/shared/TrueSignal/init.luau#L70"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Signal<!-- -->.</code><code class="green_DgR4">unstore</code><code>(</code><div class="inset_uKQm"><div><code>signal<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/LightSignal/api/Signal">Signal</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The signal to remove.</p>
+</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Removes a signal from the global registry.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="getStored"><code style="text-decoration:none">getStored</code><a href="#getStored" class="hash-link" aria-label="Direct link to getStored" title="Direct link to getStored">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/x6nny/TrueSignal/blob/main/src/shared/TrueSignal/init.luau#L90"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Signal<!-- -->.</code><code class="green_DgR4">getStored</code><code>(</code><div class="inset_uKQm"><div><code>name<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+<p>The name of the signal to retrieve.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/LightSignal/api/Signal">Signal</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The stored signal, or nil if not found.</p>
+</span></span></div><div>
+<p>Retrieves a stored signal by name.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="new"><code style="text-decoration:none">new</code><a href="#new" class="hash-link" aria-label="Direct link to new" title="Direct link to new">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/x6nny/TrueSignal/blob/main/src/shared/TrueSignal/init.luau#L239"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Signal<!-- -->.</code><code class="green_DgR4">new</code><code>(</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/LightSignal/api/Signal">Signal</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The new signal object.</p>
+</span></span></div><div>
+<p>Creates a new Signal instance.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="connect"><code style="text-decoration:none">connect</code><a href="#connect" class="hash-link" aria-label="Direct link to connect" title="Direct link to connect">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/x6nny/TrueSignal/blob/main/src/shared/TrueSignal/init.luau#L103"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Signal<!-- -->:</code><code class="green_DgR4">connect</code><code>(</code><div class="inset_uKQm"><div><code>signal<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/LightSignal/api/Signal">Signal</a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The signal instance.</p>
+</span></span></div><div><code>listener<!-- -->: </code><code class="blue_P4bS">function</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The callback function to execute when the signal is fired.</p>
+</span></span></div><div><code>cleanup?<!-- -->: </code><code class="blue_P4bS">function</code><span class="inlineDescription_G7Er">-- <span>
+<p>An optional cleanup function to run when the connection is disconnected.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">function</code><span class="inlineDescription_G7Er">-- <span>
+<p>A function that, when called, disconnects the listener.</p>
+</span></span></div><div>
+<p>Connects a listener to the signal.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="once"><code style="text-decoration:none">once</code><a href="#once" class="hash-link" aria-label="Direct link to once" title="Direct link to once">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/x6nny/TrueSignal/blob/main/src/shared/TrueSignal/init.luau#L132"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Signal<!-- -->:</code><code class="green_DgR4">once</code><code>(</code><div class="inset_uKQm"><div><code>signal<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/LightSignal/api/Signal">Signal</a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The signal instance.</p>
+</span></span></div><div><code>listener<!-- -->: </code><code class="blue_P4bS">function</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The callback function.</p>
+</span></span></div><div><code>cleanup?<!-- -->: </code><code class="blue_P4bS">function</code><span class="inlineDescription_G7Er">-- <span>
+<p>Optional cleanup function.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">function</code><span class="inlineDescription_G7Er">-- <span>
+<p>A function to disconnect the listener before it fires.</p>
+</span></span></div><div>
+<p>Connects a listener that will only run once.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="fire"><code style="text-decoration:none">fire</code><a href="#fire" class="hash-link" aria-label="Direct link to fire" title="Direct link to fire">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/x6nny/TrueSignal/blob/main/src/shared/TrueSignal/init.luau#L158"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Signal<!-- -->:</code><code class="green_DgR4">fire</code><code>(</code><div class="inset_uKQm"><div><code>signal<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/LightSignal/api/Signal">Signal</a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The signal instance.</p>
+</span></span></div><div><code>...<!-- -->: </code><code class="blue_P4bS">any</code><span class="inlineDescription_G7Er">-- <span>
+<p>The arguments to pass to the listeners.</p>
+</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Fires the signal, executing all connected listeners with the provided arguments.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="wait"><code style="text-decoration:none">wait</code><a href="#wait" class="hash-link" aria-label="Direct link to wait" title="Direct link to wait">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/x6nny/TrueSignal/blob/main/src/shared/TrueSignal/init.luau#L172"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Signal<!-- -->:</code><code class="green_DgR4">wait</code><code>(</code><div class="inset_uKQm"><div><code>signal<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/LightSignal/api/Signal">Signal</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The signal instance.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">...any</code><span class="inlineDescription_G7Er">-- <span>
+<p>The arguments passed when the signal was fired.</p>
+</span></span></div><div>
+<p>Yields the current thread until the signal is fired.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="waitUntil"><code style="text-decoration:none">waitUntil</code><a href="#waitUntil" class="hash-link" aria-label="Direct link to waitUntil" title="Direct link to waitUntil">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/x6nny/TrueSignal/blob/main/src/shared/TrueSignal/init.luau#L193"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Signal<!-- -->:</code><code class="green_DgR4">waitUntil</code><code>(</code><div class="inset_uKQm"><div><code>signal<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/LightSignal/api/Signal">Signal</a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The signal instance.</p>
+</span></span></div><div><code>timeout<!-- -->: </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>The maximum time to wait in seconds.</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">...any</code><span class="inlineDescription_G7Er">-- <span>
+<p>The arguments from the signal, or nil if timed out.</p>
+</span></span></div><div>
+<p>Yields until the signal is fired or the timeout is reached.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="cleanUp"><code style="text-decoration:none">cleanUp</code><a href="#cleanUp" class="hash-link" aria-label="Direct link to cleanUp" title="Direct link to cleanUp">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/x6nny/TrueSignal/blob/main/src/shared/TrueSignal/init.luau#L224"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Signal<!-- -->:</code><code class="green_DgR4">cleanUp</code><code>(</code><div class="inset_uKQm"><div><code>signal<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/LightSignal/api/Signal">Signal</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The signal instance.</p>
+</span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+<p>Disconnects all listeners and runs their cleanup functions.</p>
+</div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
+    &quot;functions&quot;: [
+        {
+            &quot;name&quot;: &quot;store&quot;,
+            &quot;desc&quot;: &quot;Stores a signal in a global registry by name.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;signal&quot;,
+                    &quot;desc&quot;: &quot;The signal to store.&quot;,
+                    &quot;lua_type&quot;: &quot;Signal&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;name&quot;,
+                    &quot;desc&quot;: &quot;The name to register the signal under.&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;overwrite?&quot;,
+                    &quot;desc&quot;: &quot;Whether to overwrite an existing signal with the same name.&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 57,
+                &quot;path&quot;: &quot;src/shared/TrueSignal/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;unstore&quot;,
+            &quot;desc&quot;: &quot;Removes a signal from the global registry.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;signal&quot;,
+                    &quot;desc&quot;: &quot;The signal to remove.&quot;,
+                    &quot;lua_type&quot;: &quot;Signal&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 70,
+                &quot;path&quot;: &quot;src/shared/TrueSignal/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;getStored&quot;,
+            &quot;desc&quot;: &quot;Retrieves a stored signal by name.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;name&quot;,
+                    &quot;desc&quot;: &quot;The name of the signal to retrieve.&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The stored signal, or nil if not found.&quot;,
+                    &quot;lua_type&quot;: &quot;Signal&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 90,
+                &quot;path&quot;: &quot;src/shared/TrueSignal/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;connect&quot;,
+            &quot;desc&quot;: &quot;Connects a listener to the signal.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;signal&quot;,
+                    &quot;desc&quot;: &quot;The signal instance.&quot;,
+                    &quot;lua_type&quot;: &quot;Signal&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;listener&quot;,
+                    &quot;desc&quot;: &quot;The callback function to execute when the signal is fired.&quot;,
+                    &quot;lua_type&quot;: &quot;function&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;cleanup?&quot;,
+                    &quot;desc&quot;: &quot;An optional cleanup function to run when the connection is disconnected.&quot;,
+                    &quot;lua_type&quot;: &quot;function&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;A function that, when called, disconnects the listener.&quot;,
+                    &quot;lua_type&quot;: &quot;function&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 103,
+                &quot;path&quot;: &quot;src/shared/TrueSignal/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;once&quot;,
+            &quot;desc&quot;: &quot;Connects a listener that will only run once.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;signal&quot;,
+                    &quot;desc&quot;: &quot;The signal instance.&quot;,
+                    &quot;lua_type&quot;: &quot;Signal&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;listener&quot;,
+                    &quot;desc&quot;: &quot;The callback function.&quot;,
+                    &quot;lua_type&quot;: &quot;function&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;cleanup?&quot;,
+                    &quot;desc&quot;: &quot;Optional cleanup function.&quot;,
+                    &quot;lua_type&quot;: &quot;function&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;A function to disconnect the listener before it fires.&quot;,
+                    &quot;lua_type&quot;: &quot;function&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 132,
+                &quot;path&quot;: &quot;src/shared/TrueSignal/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;fire&quot;,
+            &quot;desc&quot;: &quot;Fires the signal, executing all connected listeners with the provided arguments.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;signal&quot;,
+                    &quot;desc&quot;: &quot;The signal instance.&quot;,
+                    &quot;lua_type&quot;: &quot;Signal&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;...&quot;,
+                    &quot;desc&quot;: &quot;The arguments to pass to the listeners.&quot;,
+                    &quot;lua_type&quot;: &quot;any&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 158,
+                &quot;path&quot;: &quot;src/shared/TrueSignal/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;wait&quot;,
+            &quot;desc&quot;: &quot;Yields the current thread until the signal is fired.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;signal&quot;,
+                    &quot;desc&quot;: &quot;The signal instance.&quot;,
+                    &quot;lua_type&quot;: &quot;Signal&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The arguments passed when the signal was fired.&quot;,
+                    &quot;lua_type&quot;: &quot;...any&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 172,
+                &quot;path&quot;: &quot;src/shared/TrueSignal/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;waitUntil&quot;,
+            &quot;desc&quot;: &quot;Yields until the signal is fired or the timeout is reached.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;signal&quot;,
+                    &quot;desc&quot;: &quot;The signal instance.&quot;,
+                    &quot;lua_type&quot;: &quot;Signal&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;timeout&quot;,
+                    &quot;desc&quot;: &quot;The maximum time to wait in seconds.&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The arguments from the signal, or nil if timed out.&quot;,
+                    &quot;lua_type&quot;: &quot;...any&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 193,
+                &quot;path&quot;: &quot;src/shared/TrueSignal/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;cleanUp&quot;,
+            &quot;desc&quot;: &quot;Disconnects all listeners and runs their cleanup functions.&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;signal&quot;,
+                    &quot;desc&quot;: &quot;The signal instance.&quot;,
+                    &quot;lua_type&quot;: &quot;Signal&quot;
+                }
+            ],
+            &quot;returns&quot;: [],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 224,
+                &quot;path&quot;: &quot;src/shared/TrueSignal/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;new&quot;,
+            &quot;desc&quot;: &quot;Creates a new Signal instance.&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;The new signal object.&quot;,
+                    &quot;lua_type&quot;: &quot;Signal&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 239,
+                &quot;path&quot;: &quot;src/shared/TrueSignal/init.luau&quot;
+            }
+        }
+    ],
+    &quot;properties&quot;: [],
+    &quot;types&quot;: [
+        {
+            &quot;name&quot;: &quot;SignalData&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;connections&quot;,
+                    &quot;lua_type&quot;: &quot;{ { listener: listener, cleanup: cleanup } }&quot;,
+                    &quot;desc&quot;: &quot;&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 14,
+                &quot;path&quot;: &quot;src/shared/TrueSignal/init.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;SignalClass&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;store&quot;,
+                    &quot;lua_type&quot;: &quot;(signal: Signal, name: string, overwrite: boolean?) -&gt; ()&quot;,
+                    &quot;desc&quot;: &quot;&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;unstore&quot;,
+                    &quot;lua_type&quot;: &quot;(signal: Signal) -&gt; ()&quot;,
+                    &quot;desc&quot;: &quot;&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;fire&quot;,
+                    &quot;lua_type&quot;: &quot;(signal: Signal, ...any) -&gt; ()&quot;,
+                    &quot;desc&quot;: &quot;&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;connect&quot;,
+                    &quot;lua_type&quot;: &quot;(signal: Signal, listener: function, cleanup: function?) -&gt; () -&gt; ()&quot;,
+                    &quot;desc&quot;: &quot;&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;once&quot;,
+                    &quot;lua_type&quot;: &quot;(signal: Signal, listener: function, cleanup: function?) -&gt; () -&gt; ()&quot;,
+                    &quot;desc&quot;: &quot;&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;wait&quot;,
+                    &quot;lua_type&quot;: &quot;(signal: Signal) -&gt; ...any&quot;,
+                    &quot;desc&quot;: &quot;&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;waitUntil&quot;,
+                    &quot;lua_type&quot;: &quot;(signal: Signal, timeout: number) -&gt; ...any&quot;,
+                    &quot;desc&quot;: &quot;&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;cleanUp&quot;,
+                    &quot;lua_type&quot;: &quot;(signal: Signal) -&gt; ()&quot;,
+                    &quot;desc&quot;: &quot;&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 35,
+                &quot;path&quot;: &quot;src/shared/TrueSignal/init.luau&quot;
+            }
+        }
+    ],
+    &quot;name&quot;: &quot;Signal&quot;,
+    &quot;desc&quot;: &quot;A lightweight Signal implementation for handling custom events.&quot;,
+    &quot;source&quot;: {
+        &quot;line&quot;: 5,
+        &quot;path&quot;: &quot;src/shared/TrueSignal/init.luau&quot;
+    }
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#SignalClass" class="table-of-contents__link toc-highlight">SignalClass</a></li><li><a href="#SignalData" class="table-of-contents__link toc-highlight">SignalData</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#cleanUp" class="table-of-contents__link toc-highlight">:cleanUp</a></li><li><a href="#connect" class="table-of-contents__link toc-highlight">:connect</a></li><li><a href="#fire" class="table-of-contents__link toc-highlight">:fire</a></li><li><a href="#once" class="table-of-contents__link toc-highlight">:once</a></li><li><a href="#wait" class="table-of-contents__link toc-highlight">:wait</a></li><li><a href="#waitUntil" class="table-of-contents__link toc-highlight">:waitUntil</a></li><li><a href="#getStored" class="table-of-contents__link toc-highlight">.getStored</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li><li><a href="#store" class="table-of-contents__link toc-highlight">.store</a></li><li><a href="#unstore" class="table-of-contents__link toc-highlight">.unstore</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 x6nny. Built with Moonwave and Docusaurus</div></div></div></footer></div>
+</body>
+</html>

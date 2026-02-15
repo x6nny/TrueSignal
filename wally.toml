@@ -1,0 +1,10 @@
+[package]
+name = "x6nny/truesignal"
+description = "A simple signal library."
+authors = ["x6nny"]
+version = "0.1.1"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+ignore = ["aftman.toml"]
+
+[dependencies]
