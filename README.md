@@ -1,4 +1,5 @@
 # ⚡ TrueSignal
+Documentation: https://x6nny.github.io/TrueSignal/
 
 A lightweight, strongly-typed Signal implementation for Roblox development. This utility allows for event-driven programming with support for generics, built-in cleanup handling, and a global signal registry.
 
